@@ -1,0 +1,90 @@
+/* * Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap");
+
+/* * Font names */
+/* *  Comic Neue, cursive */
+/* *Poppins, sans-serif*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+Body {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+#main {
+  background-color: #000000;
+  font-family: Poppins, sans-serif;
+}
+
+#page1 {
+  width: 100%;
+  min-height: 100svh;
+
+  & > #nav {
+    width: 100%;
+    min-height: 5svh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  & > #nav > .nav-left > h1 {
+    margin-left: 1svw;
+    width: 4svw;
+    height: 4svh;
+    mix-blend-mode: difference;
+    font-size: 4svh;
+  }
+  & > #nav > .nav-center > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4svw;
+    position: relative;
+  }
+  .nav-li {
+    list-style: none;
+    font-weight: 300;
+  }
+  .nav-li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.75s ease-out;
+  }
+  .nav-li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  & > div > h1 {
+    font-family: Poppins, sans-serif;
+    font-weight: 900;
+    margin-top: 25svh;
+    margin-left: 20%;
+    font-size: 4svw;
+  }
+  & > div > h1 > video {
+    border-radius: 500%;
+    width: 25svw;
+    height: 25svh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all linear 0.3s;
+    clip-path: circle();
+  }
+}
