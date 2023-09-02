@@ -11,11 +11,19 @@
       <video src="Bg.mp4" loop autoplay muted></video>
       <div id="signup">
         <form>
+            <br>
           <legend>Sign Up</legend>
-          <input type="text" id="name" required placeholder="Name" />
-          <input type="email" id="email" placeholder="Email"/>
-          <input type="password" name="Password" id="">
-          <input type="submit" value="Sign Up" />
+          <h1 class="name-h1">Name:</h1>
+          <input type="text" class="name" required />
+          <br />
+          <h1 class="name-h1">Email:</h1>
+          <input type="email" class="name" />
+          <br />
+          <h1 class="name-h1">Password:</h1>
+          <input type="password" class="name" id="password" />
+          <div id="checkbox" onclick="myFunction()"> show </div>
+          <br>
+          <input type="submit" placeholder="Sign Up" id="submit" />
         </form>
       </div>
     </div>
